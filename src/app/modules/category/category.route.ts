@@ -4,15 +4,16 @@ import { auth } from '../../middleware/auth';
 import { Role } from '../../../generated/prisma/enums';
 
 const router = Router();
+const accessRole = auth(Role.ADMIN, Role.SUPER_ADMIN);
 
-router.post('/', auth(Role.ADMIN), CategoryController.createCategory);
+router.post('/', accessRole, CategoryController.createCategory);
 
 router.get('/', CategoryController.getAllCategories);
 
-router.get('/:id', auth(Role.ADMIN), CategoryController.getSingleCategory);
+router.get('/:id', accessRole, CategoryController.getSingleCategory);
 
-router.patch('/:id', auth(Role.ADMIN), CategoryController.updateCategory);
+router.patch('/:id', accessRole, CategoryController.updateCategory);
 
-router.delete('/:id', auth(Role.ADMIN), CategoryController.deleteCategory);
+router.delete('/:id', accessRole, CategoryController.deleteCategory);
 
 export const categoryRoutes = router;
