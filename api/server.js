@@ -6372,7 +6372,7 @@ var corsOptions = {
     "http://localhost:3000",
     "https://www.seraplace.com",
     "www.seraplace.com",
-    "https://next-buy-ai-frontend.vercel.app"
+    "https://dream-cotex-frontend.vercel.app"
   ],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
