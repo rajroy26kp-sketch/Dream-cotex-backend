@@ -10,6 +10,7 @@ const app: Application = express();
 const corsOptions = {
   origin: [
     'http://localhost:3000',
+    'http://localhost:3001',
     'https://www.seraplace.com',
     'www.seraplace.com',
     'https://dream-cotex-frontend.vercel.app',
